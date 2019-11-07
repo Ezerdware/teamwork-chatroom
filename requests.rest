@@ -1,0 +1,111 @@
+
+
+POST  http://localhost:3000/api/v1/auth/create-user
+Content-Type: application/json
+
+{
+      "firstName": "JOHN",
+      "lastName": "ALABI",
+      "email": "john.olamide23@gmail.com",
+      "password": "horLAR111;;;",
+      "gender": "MALE",
+      "jobRole": "SOFTWARE ENGINEER",
+      "department": "COMPUTER SCIENCE",
+      "address": "BL  BLA BLA"
+}
+
+###
+
+POST  http://localhost:3000/api/v1/auth/signin
+Content-Type: application/json
+
+{
+      "email": "john.olamide23@gmail.com",
+      "password": "horLAR111;;;"
+}
+
+###
+
+POST  http://localhost:3000/api/v1/gifs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyODkwMDAwLCJleHAiOjE1NzI4OTE4MDB9.YLfPP0KZ_J-ADtQ6yDuUBkwnwGcvEMrd-WhuvEMnEXs
+
+{
+      "image": "JOHN",
+      "title": "horLAR111;;;"
+}
+
+###
+
+POST  http://localhost:3000/api/v1/articles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTczMDg1NjM4LCJleHAiOjE1NzMwODc0Mzh9.t7IlcLYJQAtx6_iVNO8ziNf36OpckBFI94Xua-eF02Q
+
+{
+      "title": "",
+      "article": ""
+}
+
+
+###
+
+PATCH   http://localhost:3000/api/v1/articles/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjAzNzk4LCJleHAiOjE1NzI2MDU1OTh9.x1WxrbiWcu8bnMIeTykgRAihtQi-35FHkGkmsfurdgs
+
+{
+      "title": "",
+      "article": ""
+}
+
+###
+
+DELETE    http://localhost:3000/api/v1/articles/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjAzNzk4LCJleHAiOjE1NzI2MDU1OTh9.x1WxrbiWcu8bnMIeTykgRAihtQi-35FHkGkmsfurdgs
+
+
+###
+
+DELETE    http://localhost:3000/api/v1/articles/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjAzNzk4LCJleHAiOjE1NzI2MDU1OTh9.x1WxrbiWcu8bnMIeTykgRAihtQi-35FHkGkmsfurdgs
+
+
+###
+
+POST    http://localhost:3000/api/v1/articles/1/comment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjAzNzk4LCJleHAiOjE1NzI2MDU1OTh9.x1WxrbiWcu8bnMIeTykgRAihtQi-35FHkGkmsfurdgs
+
+{
+      "comment": ""
+}
+
+###
+
+POST    http://localhost:3000/api/v1/articles/1/comment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjcwODkzLCJleHAiOjE1NzI2NzI2OTN9.W6gr01g1fcG0WLMXBuxBnvTKEFt1kpfIc5eNjoPPODo
+
+{
+      "comment": ""
+}
+
+###
+
+GET    http://localhost:3000/api/v1/feed
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjcwODkzLCJleHAiOjE1NzI2NzI2OTN9.W6gr01g1fcG0WLMXBuxBnvTKEFt1kpfIc5eNjoPPODo
+
+###
+
+GET    http://localhost:3000/api/v1/articles/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjAzNzk4LCJleHAiOjE1NzI2MDU1OTh9.x1WxrbiWcu8bnMIeTykgRAihtQi-35FHkGkmsfurdgs
+
+###
+
+GET    http://localhost:3000/api/v1/articles/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyNjcwODkzLCJleHAiOjE1NzI2NzI2OTN9.W6gr01g1fcG0WLMXBuxBnvTKEFt1kpfIc5eNjoPPODo
