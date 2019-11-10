@@ -3,7 +3,17 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const fileUpload = require("express-fileupload");
-const cloudinary= require('cloudinary').v2;
+const cloudinary = require("cloudinary").v2;
+const { Pool, Client } = require("pg");
+const connectionString = "postgressql://postgres:horLARmiDE44(+++)@localhost:5432/teamwork";
+
+const client = new Client({
+  connectionString:connectionString,
+});
+
+
+client.connect()
+
 
 const userController = require("./controllers/users");
 // express setup
@@ -20,8 +30,8 @@ app.use(
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.API_KEY,
-  api_secret:process.env.API_SECRET
-})
+  api_secret: process.env.API_SECRET
+});
 
 app.use(express.json());
 
@@ -40,7 +50,7 @@ app.use((req, res, next) => {
 });
 
 // controller setup
-userController(app, bcrypt, jwt, cloudinary);
+userController(app, bcrypt, jwt, cloudinary, client);
 
 //  server listener
 const PORT = process.env.PORT || 3000;

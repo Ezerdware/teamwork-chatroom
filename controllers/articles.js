@@ -10,8 +10,8 @@ module.exports = (
   app.post("/api/v1/gifs", authenticationToken, (req, res) => {
     //private
     let addGif = {
-      image: req.files.gif,
-      title: req.files.gif.name
+      image: req.files.image,
+      title: req.files.title
     };
     console.log(addGif);
 
@@ -34,6 +34,7 @@ module.exports = (
           console.log(err);
         } else {
           console.log(result);
+          
           res.status(201).json({
             status: "Gif Uploaded Successfully",
             data: {

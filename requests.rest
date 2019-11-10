@@ -8,10 +8,11 @@ Content-Type: application/json
       "lastName": "ALABI",
       "email": "john.olamide23@gmail.com",
       "password": "horLAR111;;;",
-      "gender": "MALE",
+      "gender": "Male",
       "jobRole": "SOFTWARE ENGINEER",
       "department": "COMPUTER SCIENCE",
-      "address": "BL  BLA BLA"
+      "address": "bla bal",
+      "groupID":"t7d8098"
 }
 
 ###
@@ -28,7 +29,7 @@ Content-Type: application/json
 
 POST  http://localhost:3000/api/v1/gifs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiaG9yTEFSMTExOzs7IiwiaWF0IjoxNTcyODkwMDAwLCJleHAiOjE1NzI4OTE4MDB9.YLfPP0KZ_J-ADtQ6yDuUBkwnwGcvEMrd-WhuvEMnEXs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4ub2xhbWlkZTIzQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHJaVVZMcDcwS29LQVp1bGFZLlBycC5HdmZNNHluMndvTDBJOTJLalNaMmFTbzVSd3MzV2NTIiwidXNlcklEIjoiTTRuM1FpbyIsImdyb3VwSUQiOiJ0N2Q4MDk4IiwiaWF0IjoxNTczMzQwMTg4LCJleHAiOjE1NzMzNDE5ODh9.hJ1V-EqDEA2DLOcNp-wk-ZMM9i3eD6nbMLoJmKkqHeQ
 
 {
       "image": "JOHN",
