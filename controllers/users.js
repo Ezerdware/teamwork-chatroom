@@ -175,9 +175,7 @@ module.exports = function(app, bcrypt, jwt, cloudinary, client) {
     let err;
     const user = {
       email: req.body.email,
-      password: req.body.password,
-      userID:'',
-      groupId:''
+      password: req.body.password
     };
 
     client.query(
@@ -187,7 +185,7 @@ module.exports = function(app, bcrypt, jwt, cloudinary, client) {
     `,
       async (err, result) => {
         if (err) {
-          output.isUserEmailValid = false;
+          isUserEmailValid = false;
           console.log(err);
         } else {
           isUserEmailValid = true;
@@ -237,7 +235,8 @@ module.exports = function(app, bcrypt, jwt, cloudinary, client) {
     jwt,
     cloudinary,
     authenticationToken,
-    generateAccessToken
+    generateAccessToken,
+    client
   );
 
   function authenticationToken(req, res, next) {
